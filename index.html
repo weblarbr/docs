@@ -4,40 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Central de Informações — Weblar</title>
-<meta name="description" content="Como a Weblar funciona, formas de pagamento, termos de uso e política de privacidade. Tudo que você precisa saber, de forma clara.">
+<meta name="description" content="Tudo sobre a Weblar: como funciona, formas de pagamento, termos de uso e política de privacidade. Claro, honesto e sem letra miúda.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #0D1520;
-    --navy-card: #141F30;
-    --navy-soft: #0A111A;
-    --gold: #D4A017;
-    --gold-soft: rgba(212,160,23,0.12);
-    --texto: #F1F5F9;
-    --texto-fraco: #9AA5B1;
-    --linha: #2A3646;
-    --verde: #6fbf8b;
+    --navy: #0D1520; --navy-card: #141F30; --navy-soft: #0A111A;
+    --gold: #D4A017; --gold-soft: rgba(212,160,23,0.12);
+    --texto: #F1F5F9; --texto-fraco: #9AA5B1; --linha: #2A3646; --verde: #6fbf8b;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background: var(--navy);
-    color: var(--texto);
-    line-height: 1.7;
-  }
+  body { font-family: 'Inter', system-ui, sans-serif; background: var(--navy); color: var(--texto); line-height: 1.7; }
   a { color: inherit; text-decoration: none; }
 
-  /* ===== TOPO ===== */
-  .topbar {
-    position: sticky; top: 0; z-index: 40;
-    background: rgba(13,21,32,0.9); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--linha);
-    padding: 16px 32px;
-  }
-  .topbar-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .topbar { position: sticky; top: 0; z-index: 40; background: rgba(13,21,32,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--linha); padding: 16px 32px; }
+  .topbar-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
   .brand { display: flex; align-items: center; gap: 11px; }
   .brand-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--gold); display: grid; place-items: center; color: var(--navy); font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.15rem; }
   .brand-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; }
@@ -45,67 +28,36 @@
   .topbar-link { font-size: 0.9rem; color: var(--texto-fraco); transition: color .15s; }
   .topbar-link:hover { color: var(--gold); }
 
-  /* ===== LAYOUT ===== */
-  .shell { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 48px; padding: 48px 32px 80px; }
-  @media (max-width: 860px){ .shell { grid-template-columns: 1fr; gap: 0; } }
+  .hero { max-width: 1080px; margin: 0 auto; padding: 72px 32px 40px; }
+  .hero-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--linha); padding: 6px 14px; border-radius: 100px; margin-bottom: 24px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 18px; }
+  .hero p { color: var(--texto-fraco); font-size: 1.15rem; max-width: 620px; }
 
-  /* ===== SIDEBAR ===== */
-  .side { position: sticky; top: 96px; align-self: start; height: max-content; }
-  @media (max-width: 860px){ .side { position: static; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--linha); } }
-  .side-title { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--texto-fraco); margin-bottom: 16px; }
-  .side-nav { list-style: none; display: flex; flex-direction: column; gap: 2px; }
-  .side-nav a { display: block; padding: 9px 14px; border-radius: 8px; font-size: 0.92rem; color: var(--texto-fraco); border-left: 2px solid transparent; transition: all .15s; }
-  .side-nav a:hover { color: var(--texto); background: var(--navy-card); }
-  .side-nav a.active { color: var(--gold); background: var(--gold-soft); border-left-color: var(--gold); font-weight: 600; }
+  .cards { max-width: 1080px; margin: 0 auto; padding: 24px 32px 60px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  @media (max-width: 720px){ .cards { grid-template-columns: 1fr; } }
+  .card { display: block; background: var(--navy-card); border: 1px solid var(--linha); border-radius: 16px; padding: 30px 28px; transition: border-color .2s, transform .2s; }
+  .card:hover { border-color: rgba(212,160,23,0.4); transform: translateY(-4px); }
+  .card-ico { width: 46px; height: 46px; border-radius: 11px; background: var(--gold-soft); display: grid; place-items: center; margin-bottom: 18px; }
+  .card-ico svg { width: 24px; height: 24px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .card h2 { font-family: 'Playfair Display', serif; font-size: 1.35rem; margin-bottom: 8px; }
+  .card p { color: var(--texto-fraco); font-size: 0.95rem; margin-bottom: 16px; }
+  .card-link { color: var(--gold); font-weight: 600; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 6px; }
 
-  /* ===== CONTEÚDO ===== */
-  .content { max-width: 720px; min-width: 0; }
-  .doc-hero { margin-bottom: 56px; }
-  .doc-hero h1 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 14px; }
-  .doc-hero p { color: var(--texto-fraco); font-size: 1.12rem; }
-  .doc-updated { display: inline-block; margin-top: 18px; font-size: 0.82rem; color: var(--texto-fraco); background: var(--navy-card); border: 1px solid var(--linha); padding: 6px 14px; border-radius: 100px; }
+  .contato-box { max-width: 1080px; margin: 0 auto 70px; padding: 0 32px; }
+  .contato-inner { background: linear-gradient(160deg, var(--navy-card), var(--navy-soft)); border: 1px solid var(--linha); border-radius: 18px; padding: 40px 34px; text-align: center; }
+  .contato-inner h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 10px; }
+  .contato-inner p { color: var(--texto-fraco); margin-bottom: 20px; }
+  .contato-email { display: inline-flex; align-items: center; gap: 9px; background: var(--gold); color: var(--navy); font-weight: 600; padding: 12px 24px; border-radius: 9px; transition: opacity .15s; }
+  .contato-email:hover { opacity: 0.9; }
 
-  .doc-section { padding-top: 40px; margin-top: 40px; border-top: 1px solid var(--linha); scroll-margin-top: 90px; }
-  .doc-section:first-of-type { border-top: none; margin-top: 0; }
-  .doc-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-  .doc-section h2 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.9rem; letter-spacing: -0.01em; margin-bottom: 20px; }
-  .doc-section h3 { font-size: 1.12rem; font-weight: 600; margin: 30px 0 10px; }
-  .doc-section p { color: var(--texto); margin-bottom: 16px; }
-  .doc-section p.muted { color: var(--texto-fraco); }
-  .doc-section ul, .doc-section ol { margin: 0 0 16px; padding-left: 22px; color: var(--texto); }
-  .doc-section li { margin-bottom: 8px; }
-  .doc-section strong { color: var(--texto); font-weight: 600; }
-
-  /* passos numerados (Como funciona) */
-  .steps { list-style: none; padding: 0; counter-reset: step; }
-  .steps li { position: relative; padding: 0 0 22px 52px; counter-increment: step; }
-  .steps li::before { content: counter(step); position: absolute; left: 0; top: -2px; width: 34px; height: 34px; border-radius: 50%; background: var(--gold-soft); border: 1px solid rgba(212,160,23,0.35); color: var(--gold); font-weight: 700; display: grid; place-items: center; font-size: 0.95rem; }
-  .steps li:not(:last-child)::after { content: ""; position: absolute; left: 17px; top: 34px; bottom: 0; width: 1px; background: var(--linha); }
-  .steps h3 { margin: 4px 0 6px; }
-
-  /* tabela de planos */
-  .doc-table { width: 100%; border-collapse: collapse; margin: 18px 0 22px; font-size: 0.95rem; }
-  .doc-table th, .doc-table td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--linha); }
-  .doc-table th { color: var(--texto-fraco); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
-  .doc-table td:last-child { color: var(--gold); font-weight: 600; white-space: nowrap; }
-
-  /* callout */
-  .callout { display: flex; gap: 14px; background: var(--navy-card); border: 1px solid var(--linha); border-left: 3px solid var(--gold); border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
-  .callout .ico { color: var(--gold); font-size: 1.15rem; flex-shrink: 0; }
-  .callout p { margin: 0; font-size: 0.92rem; color: var(--texto-fraco); }
-  .callout.aviso { border-left-color: #e0a656; }
-  .callout.aviso .ico { color: #e0a656; }
-
-  /* footer */
   footer { border-top: 1px solid var(--linha); padding: 40px 32px; }
-  .foot-inner { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .foot-inner { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
   .foot-links { display: flex; gap: 22px; flex-wrap: wrap; }
   .foot-links a { color: var(--texto-fraco); font-size: 0.9rem; transition: color .15s; }
   .foot-links a:hover { color: var(--gold); }
   .foot-copy { color: var(--texto-fraco); font-size: 0.84rem; }
-
   :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card:hover { transform: none; } }
 </style>
 </head>
 <body>
@@ -121,153 +73,48 @@
   </div>
 </div>
 
-<div class="shell">
+<div class="hero">
+  <span class="hero-eyebrow">Central de Informações</span>
+  <h1>Tudo sobre a Weblar,<br>em um só lugar.</h1>
+  <p>Como a gente trabalha, quanto custa, e as regras do jogo — explicadas de forma clara e honesta. Escolha um assunto abaixo.</p>
+</div>
 
-  <!-- SIDEBAR -->
-  <aside class="side">
-    <div class="side-title">Navegação</div>
-    <ul class="side-nav" id="sidenav">
-      <li><a href="#como-funciona" class="active">Como funciona</a></li>
-      <li><a href="#pagamentos">Pagamentos</a></li>
-      <li><a href="#termos">Termos de Uso</a></li>
-      <li><a href="#privacidade">Privacidade (LGPD)</a></li>
-    </ul>
-  </aside>
+<div class="cards">
+  <a href="como-funciona/" class="card">
+    <div class="card-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+    <h2>Como funciona</h2>
+    <p>Do primeiro contato ao seu site no ar. Cada etapa do processo, sem mistério.</p>
+    <span class="card-link">Ler mais →</span>
+  </a>
+  <a href="pagamentos/" class="card">
+    <div class="card-ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+    <h2>Pagamentos</h2>
+    <p>Preços, formas de pagamento (Pix e cartão) e como funcionam as condições.</p>
+    <span class="card-link">Ler mais →</span>
+  </a>
+  <a href="termos/" class="card">
+    <div class="card-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
+    <h2>Termos de Uso</h2>
+    <p>As condições da relação entre você e a Weblar ao contratar um site.</p>
+    <span class="card-link">Ler mais →</span>
+  </a>
+  <a href="privacidade/" class="card">
+    <div class="card-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+    <h2>Privacidade</h2>
+    <p>Como cuidamos dos seus dados, em conformidade com a LGPD.</p>
+    <span class="card-link">Ler mais →</span>
+  </a>
+</div>
 
-  <!-- CONTEÚDO -->
-  <main class="content">
-    <div class="doc-hero">
-      <h1>Central de Informações</h1>
-      <p>Tudo que você precisa saber sobre como a Weblar trabalha — do primeiro contato ao seu site no ar, de forma clara e sem letra miúda.</p>
-      <span class="doc-updated">Última atualização: julho de 2026</span>
-    </div>
-
-    <!-- COMO FUNCIONA -->
-    <section class="doc-section" id="como-funciona">
-      <div class="doc-eyebrow">O processo</div>
-      <h2>Como funciona</h2>
-      <p class="muted">Do orçamento à entrega, cada etapa é combinada com você e acompanhada pelo seu painel na Weblar.</p>
-      <ol class="steps">
-        <li>
-          <h3>Você pede o orçamento</h3>
-          <p class="muted">Conta sobre o seu negócio pelo formulário no site. Respondemos em até 24 horas com uma proposta.</p>
-        </li>
-        <li>
-          <h3>Aprova a proposta</h3>
-          <p class="muted">Você recebe o valor, o prazo e tudo que está incluído. Se fizer sentido, aprova e combinamos o início.</p>
-        </li>
-        <li>
-          <h3>Envia o briefing</h3>
-          <p class="muted">Passa textos, imagens e detalhes do seu negócio. Quanto mais completo, mais rápido o site fica pronto.</p>
-        </li>
-        <li>
-          <h3>A gente cria o site</h3>
-          <p class="muted">Desenvolvemos com a sua identidade — cores, logo e estilo. Você acompanha e pede ajustes até ficar do seu jeito.</p>
-        </li>
-        <li>
-          <h3>Seu site entra no ar</h3>
-          <p class="muted">Publicamos o site e o link aparece direto no seu painel. Fica no ar de graça num endereço Weblar, ou no seu domínio próprio quando quiser.</p>
-        </li>
-      </ol>
-      <div class="callout">
-        <span class="ico">✦</span>
-        <p>A hospedagem em um endereço Weblar é gratuita. Um domínio próprio (como seunegocio.com.br) é opcional e cobrado à parte, direto no registrador.</p>
-      </div>
-    </section>
-
-    <!-- PAGAMENTOS -->
-    <section class="doc-section" id="pagamentos">
-      <div class="doc-eyebrow">Valores e condições</div>
-      <h2>Pagamentos</h2>
-      <p>Trabalhamos com preços transparentes e pagamento único por projeto — sem mensalidade escondida. O valor depende do tamanho do site que o seu negócio precisa.</p>
-
-      <table class="doc-table">
-        <thead>
-          <tr><th>Plano</th><th>Ideal para</th><th>Valor</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Básico</td><td>Presença online simples e direta</td><td>R$ 400</td></tr>
-          <tr><td>Profissional</td><td>Negócios que querem se destacar</td><td>R$ 700</td></tr>
-          <tr><td>Completo</td><td>Quem quer o site mais completo</td><td>R$ 1.200</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Formas de pagamento</h3>
-      <p class="muted">Aceitamos <strong>Pix</strong> e <strong>InfinitePay</strong> (cartão, à vista ou parcelado). A forma é combinada com você antes de começar.</p>
-
-      <h3>Como funciona o pagamento</h3>
-      <p class="muted">Normalmente combinamos um <strong>sinal</strong> no início do projeto e o <strong>restante na entrega</strong>. As condições exatas são sempre acertadas de forma clara antes de qualquer trabalho começar — você sabe quanto, quando e como vai pagar antes de aprovar.</p>
-
-      <div class="callout aviso">
-        <span class="ico">!</span>
-        <p>Os valores acima são pontos de partida. O preço final do seu projeto é confirmado no orçamento, conforme o que o seu site precisa.</p>
-      </div>
-    </section>
-
-    <!-- TERMOS -->
-    <section class="doc-section" id="termos">
-      <div class="doc-eyebrow">Condições de uso</div>
-      <h2>Termos de Uso</h2>
-      <p class="muted">Estas condições descrevem a relação entre a Weblar e os clientes que contratam seus serviços de criação de sites.</p>
-
-      <h3>1. Sobre o serviço</h3>
-      <p class="muted">A Weblar oferece criação de sites sob medida para pequenos negócios, incluindo desenvolvimento, publicação e hospedagem inicial gratuita em endereço próprio da Weblar. O escopo de cada projeto é definido no orçamento aprovado pelo cliente.</p>
-
-      <h3>2. Contratação</h3>
-      <p class="muted">O serviço é contratado mediante aprovação de uma proposta que especifica valor, prazo e escopo. A aprovação pode ocorrer por meio digital (mensagem, e-mail ou painel) e representa concordância com estes termos.</p>
-
-      <h3>3. Responsabilidades do cliente</h3>
-      <p class="muted">O cliente é responsável por fornecer os conteúdos necessários (textos, imagens, logo e informações do negócio) e por garantir que possui os direitos de uso desses materiais. Conteúdos de terceiros protegidos por direitos autorais devem ser fornecidos com a devida autorização.</p>
-
-      <h3>4. Prazos e revisões</h3>
-      <p class="muted">O prazo de entrega é combinado no orçamento e pode variar conforme a rapidez no envio do briefing e dos materiais. O projeto inclui rodadas de revisão para ajustes, conforme acordado na proposta.</p>
-
-      <h3>5. Pagamento</h3>
-      <p class="muted">As condições de pagamento seguem o descrito na seção Pagamentos e no orçamento aprovado. O atraso no pagamento pode implicar na suspensão do serviço ou da publicação do site, conforme combinado.</p>
-
-      <h3>6. Hospedagem e domínio</h3>
-      <p class="muted">A hospedagem gratuita é oferecida em endereço da Weblar como cortesia e conveniência. O cliente pode, a qualquer momento, migrar o site para um domínio próprio. A Weblar não se responsabiliza por indisponibilidades de serviços de terceiros usados na hospedagem.</p>
-
-      <h3>7. Propriedade</h3>
-      <p class="muted">Após a quitação integral do projeto, o cliente detém os direitos sobre o conteúdo final do seu site. A Weblar pode manter referência ao projeto em seu portfólio, salvo solicitação em contrário.</p>
-
-      <div class="callout aviso">
-        <span class="ico">!</span>
-        <p>Este documento é um resumo das condições de uso e não substitui um contrato ou aconselhamento jurídico. Para dúvidas específicas, entre em contato conosco.</p>
-      </div>
-    </section>
-
-    <!-- PRIVACIDADE -->
-    <section class="doc-section" id="privacidade">
-      <div class="doc-eyebrow">Seus dados</div>
-      <h2>Política de Privacidade</h2>
-      <p class="muted">Esta política explica como a Weblar coleta, usa e protege os dados pessoais dos seus clientes, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
-
-      <h3>1. Quais dados coletamos</h3>
-      <p class="muted">Coletamos os dados que você nos fornece ao pedir um orçamento ou criar uma conta: nome, e-mail, telefone, informações do seu negócio e os materiais enviados para o seu site. Também podemos coletar dados de uso da plataforma para melhorar o serviço.</p>
-
-      <h3>2. Como usamos seus dados</h3>
-      <p class="muted">Usamos seus dados para: responder ao seu orçamento, desenvolver e entregar o seu site, gerenciar sua conta e nos comunicar com você sobre o projeto. Não vendemos seus dados a terceiros.</p>
-
-      <h3>3. Compartilhamento</h3>
-      <p class="muted">Seus dados podem ser processados por serviços de terceiros que usamos para operar (como provedores de hospedagem, autenticação e e-mail). Esses serviços têm acesso apenas ao necessário para funcionar e são obrigados a proteger seus dados.</p>
-
-      <h3>4. Seus direitos</h3>
-      <p class="muted">Conforme a LGPD, você pode a qualquer momento solicitar acesso, correção ou exclusão dos seus dados, além de revogar consentimentos. A exclusão da conta e dos dados associados pode ser feita pelo próprio painel ou mediante solicitação.</p>
-
-      <h3>5. Segurança</h3>
-      <p class="muted">Adotamos medidas para proteger seus dados contra acesso não autorizado, perda ou alteração. Ainda assim, nenhum sistema é totalmente imune, e nos comprometemos a comunicar incidentes relevantes conforme exigido por lei.</p>
-
-      <h3>6. Contato</h3>
-      <p class="muted">Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato pelo e-mail de atendimento da Weblar. Responderemos no menor prazo possível.</p>
-
-      <div class="callout aviso">
-        <span class="ico">!</span>
-        <p>Esta política é um modelo informativo e não substitui a orientação de um profissional jurídico. Recomendamos revisão especializada em LGPD antes do uso definitivo.</p>
-      </div>
-    </section>
-
-  </main>
+<div class="contato-box">
+  <div class="contato-inner">
+    <h3>Ficou com alguma dúvida?</h3>
+    <p>A gente responde. É só mandar uma mensagem.</p>
+    <a href="mailto:contato@weblar.app.br" class="contato-email">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+      contato@weblar.app.br
+    </a>
+  </div>
 </div>
 
 <footer>
@@ -278,30 +125,14 @@
     </div>
     <div class="foot-links">
       <a href="https://weblar.app.br">Site principal</a>
-      <a href="https://weblar.app.br/pedir-orcamento/">Pedir orçamento</a>
-      <a href="#como-funciona">Topo</a>
+      <a href="como-funciona/">Como funciona</a>
+      <a href="pagamentos/">Pagamentos</a>
+      <a href="termos/">Termos</a>
+      <a href="privacidade/">Privacidade</a>
     </div>
     <div class="foot-copy">© 2026 Weblar · Dias Inc.</div>
   </div>
 </footer>
-
-<script>
-  // Scrollspy: destaca a seção visível na navegação lateral
-  const secs = document.querySelectorAll('.doc-section');
-  const navLinks = document.querySelectorAll('#sidenav a');
-  const byId = {};
-  navLinks.forEach(a => byId[a.getAttribute('href').slice(1)] = a);
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navLinks.forEach(a => a.classList.remove('active'));
-        const active = byId[e.target.id];
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-  secs.forEach(s => obs.observe(s));
-</script>
 
 </body>
 </html>
