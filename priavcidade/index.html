@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Weblar</title>
+<meta name="description" content="Política de Privacidade da Weblar: como coletamos, usamos e protegemos seus dados, em conformidade com a LGPD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0D1520; --navy-card:#141F30; --navy-soft:#0A111A; --gold:#D4A017; --gold-soft:rgba(212,160,23,0.12); --texto:#F1F5F9; --texto-fraco:#9AA5B1; --linha:#2A3646; --verde:#6fbf8b; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Inter',system-ui,sans-serif; background:var(--navy); color:var(--texto); line-height:1.75; }
+  a { color:inherit; text-decoration:none; }
+  .topbar { position:sticky; top:0; z-index:40; background:rgba(13,21,32,0.9); backdrop-filter:blur(12px); border-bottom:1px solid var(--linha); padding:16px 32px; }
+  .topbar-inner { max-width:780px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:11px; }
+  .brand-mark { width:32px; height:32px; border-radius:8px; background:var(--gold); display:grid; place-items:center; color:var(--navy); font-family:'Playfair Display',serif; font-weight:800; font-size:1.15rem; }
+  .brand-name { font-family:'Playfair Display',serif; font-weight:700; font-size:1.2rem; }
+  .topbar-link { font-size:0.9rem; color:var(--texto-fraco); transition:color .15s; }
+  .topbar-link:hover { color:var(--gold); }
+  .page { max-width:780px; margin:0 auto; padding:56px 32px 80px; }
+  .crumb { font-size:0.85rem; color:var(--texto-fraco); margin-bottom:28px; }
+  .crumb a { color:var(--texto-fraco); } .crumb a:hover { color:var(--gold); }
+  .page-eyebrow { font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  h1 { font-family:'Playfair Display',serif; font-weight:800; font-size:clamp(2rem,4.5vw,3rem); line-height:1.06; letter-spacing:-0.02em; margin-bottom:14px; }
+  .updated { display:inline-block; font-size:0.82rem; color:var(--texto-fraco); background:var(--navy-card); border:1px solid var(--linha); padding:6px 14px; border-radius:100px; margin-bottom:20px; }
+  .lead { color:var(--texto-fraco); font-size:1.12rem; margin-bottom:8px; }
+  h2 { font-size:1.2rem; font-weight:600; margin:38px 0 12px; color:var(--texto); scroll-margin-top:90px; }
+  h2 .num { color:var(--gold); font-family:'Playfair Display',serif; margin-right:8px; }
+  .prose p { color:var(--texto-fraco); margin-bottom:14px; }
+  .prose ul { margin:0 0 14px; padding-left:22px; color:var(--texto-fraco); }
+  .prose li { margin-bottom:8px; }
+  .prose strong { color:var(--texto); font-weight:600; }
+  .direitos { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0; }
+  @media (max-width:640px){ .direitos { grid-template-columns:1fr; } }
+  .direito { background:var(--navy-card); border:1px solid var(--linha); border-radius:10px; padding:16px 18px; }
+  .direito h4 { font-size:0.98rem; margin-bottom:5px; color:var(--texto); }
+  .direito p { font-size:0.88rem; color:var(--texto-fraco); margin:0; }
+  .callout { display:flex; gap:14px; background:var(--navy-card); border:1px solid var(--linha); border-left:3px solid #e0a656; border-radius:10px; padding:20px 22px; margin:36px 0 0; }
+  .callout .ico { color:#e0a656; font-size:1.2rem; flex-shrink:0; }
+  .callout p { margin:0; font-size:0.95rem; color:var(--texto-fraco); } .callout strong { color:var(--texto); }
+  footer { border-top:1px solid var(--linha); padding:36px 32px; margin-top:56px; }
+  .foot-inner { max-width:780px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+  .foot-links { display:flex; gap:20px; flex-wrap:wrap; }
+  .foot-links a { color:var(--texto-fraco); font-size:0.88rem; transition:color .15s; }
+  .foot-links a:hover { color:var(--gold); }
+  .foot-copy { color:var(--texto-fraco); font-size:0.82rem; }
+  :focus-visible { outline:2px solid var(--gold); outline-offset:2px; border-radius:4px; }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="../" class="brand" style="cursor:pointer;">
+      <div class="brand-mark">W</div>
+      <div class="brand-name">Weblar</div>
+    </a>
+    <a href="https://weblar.app.br" class="topbar-link">← Voltar ao site</a>
+  </div>
+</div>
+
+<div class="page">
+  <div class="crumb"><a href="../">Central</a> · Política de Privacidade</div>
+  <div class="page-eyebrow">Seus dados</div>
+  <h1>Política de Privacidade</h1>
+  <span class="updated">Vigente desde julho de 2026</span>
+  <p class="lead">A Weblar leva a sério a proteção dos seus dados. Esta política explica, de forma clara, o que coletamos, por que coletamos, e quais são os seus direitos — em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+
+  <div class="prose">
+    <h2><span class="num">1.</span>Quais dados coletamos</h2>
+    <p>Coletamos apenas o necessário para prestar o serviço:</p>
+    <ul>
+      <li><strong>Dados de contato:</strong> nome, e-mail e telefone/WhatsApp, informados quando você pede um orçamento ou cria uma conta;</li>
+      <li><strong>Dados do seu negócio:</strong> as informações e materiais que você envia para a criação do site (textos, imagens, logo, etc.);</li>
+      <li><strong>Dados de conta:</strong> informações de acesso ao painel, caso você crie uma conta na Weblar;</li>
+      <li><strong>Dados de uso:</strong> informações técnicas sobre como a plataforma é utilizada, para melhorar o serviço.</li>
+    </ul>
+
+    <h2><span class="num">2.</span>Como usamos seus dados</h2>
+    <p>Usamos seus dados exclusivamente para:</p>
+    <ul>
+      <li>Responder ao seu pedido de orçamento e nos comunicarmos com você;</li>
+      <li>Desenvolver, publicar e manter o seu site;</li>
+      <li>Gerenciar sua conta e o acesso ao painel;</li>
+      <li>Cumprir obrigações legais, quando aplicável.</li>
+    </ul>
+    <p><strong>Não vendemos seus dados a terceiros.</strong> Ponto final.</p>
+
+    <h2><span class="num">3.</span>Base legal do tratamento</h2>
+    <p>O tratamento dos seus dados se apoia nas bases legais previstas na LGPD, principalmente: a <strong>execução do contrato</strong> (para prestar o serviço que você contratou), o <strong>consentimento</strong> (quando você fornece dados voluntariamente) e o <strong>legítimo interesse</strong> (para melhorar o serviço, sempre respeitando seus direitos).</p>
+
+    <h2><span class="num">4.</span>Compartilhamento com terceiros</h2>
+    <p>Para operar, a Weblar utiliza serviços de terceiros confiáveis — como provedores de hospedagem, autenticação e envio de e-mail. Esses parceiros têm acesso apenas ao mínimo necessário para funcionar e são obrigados a proteger seus dados. Não compartilhamos seus dados com terceiros para fins de marketing.</p>
+
+    <h2><span class="num">5.</span>Seus direitos (LGPD)</h2>
+    <p>A qualquer momento, você pode exercer os seguintes direitos:</p>
+    <div class="direitos">
+      <div class="direito"><h4>Acesso</h4><p>Saber quais dados seus a gente tem.</p></div>
+      <div class="direito"><h4>Correção</h4><p>Corrigir dados incompletos ou desatualizados.</p></div>
+      <div class="direito"><h4>Exclusão</h4><p>Pedir a remoção dos seus dados.</p></div>
+      <div class="direito"><h4>Revogação</h4><p>Retirar um consentimento dado antes.</p></div>
+    </div>
+    <p>A exclusão da conta e dos dados associados pode ser feita pelo próprio painel, na Zona de Perigo, ou mediante solicitação por e-mail.</p>
+
+    <h2><span class="num">6.</span>Segurança dos dados</h2>
+    <p>Adotamos medidas técnicas e organizacionais para proteger seus dados contra acesso não autorizado, perda ou alteração. Ainda assim, nenhum sistema é totalmente imune a riscos, e nos comprometemos a comunicar incidentes relevantes conforme exigido pela lei.</p>
+
+    <h2><span class="num">7.</span>Retenção dos dados</h2>
+    <p>Mantemos seus dados apenas pelo tempo necessário para prestar o serviço e cumprir obrigações legais. Quando você solicita a exclusão, removemos seus dados dos nossos sistemas, ressalvadas as informações que a lei exige manter.</p>
+
+    <h2><span class="num">8.</span>Cookies</h2>
+    <p>O site pode utilizar cookies e tecnologias similares para funcionar corretamente e melhorar sua experiência. Você pode gerenciar os cookies nas configurações do seu navegador.</p>
+
+    <h2><span class="num">9.</span>Alterações nesta política</h2>
+    <p>Esta política pode ser atualizada a qualquer momento. A versão vigente é sempre a publicada nesta página, com a data indicada no topo.</p>
+
+    <h2><span class="num">10.</span>Contato e encarregado de dados</h2>
+    <p>Para exercer seus direitos ou tirar dúvidas sobre esta política e o tratamento dos seus dados, entre em contato pelo e-mail <strong>contato@weblar.app.br</strong>. Responderemos no menor prazo possível.</p>
+  </div>
+
+  <div class="callout">
+    <span class="ico">!</span>
+    <p><strong>Aviso.</strong> Esta política é um modelo informativo e não substitui a orientação de um profissional jurídico especializado em proteção de dados. Recomenda-se revisão especializada em LGPD antes do uso definitivo.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="brand">
+      <div class="brand-mark">W</div>
+      <div class="brand-name">Weblar</div>
+    </div>
+    <div class="foot-links">
+      <a href="../">Central</a>
+      <a href="../como-funciona/">Como funciona</a>
+      <a href="../pagamentos/">Pagamentos</a>
+      <a href="../termos/">Termos</a>
+    </div>
+    <div class="foot-copy">© 2026 Weblar</div>
+  </div>
+</footer>
+
+</body>
+</html>
